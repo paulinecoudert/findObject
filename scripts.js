@@ -58,7 +58,8 @@ var computedStoryPoints = {
 //Functionality for click binding to add/remove story points
 var toys = document.querySelectorAll(".toy");
 toys.forEach(toy => {
-  toy.addEventListener("click", () => {
+  toy.addEventListener("click", (e) => {
+     console.log(`x:${e.x} | y:${e.y}`);
      toy.classList.toggle("rescued");
      toggleStoryPoint( toy.getAttribute("story-point") )
      refreshScenario();
